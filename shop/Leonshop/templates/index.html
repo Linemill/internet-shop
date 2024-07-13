@@ -1,65 +1,31 @@
-<style>
-    * {
-        font-family: Arial;
-    }
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}"/>
 
-    h1 {
-        color: #04aa6d;
-    }
-
-    img {
-        max-width: 300px;
-        max-height: 300px;
-    }
-
-    .product {
-        display: flex;
-        border: 2px #04aa6d solid;
-        margin-top: 10px;
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    .heading {
-        display: flex;
-        align-items: center;
-    }
-
-    a {
-        margin-left: 10px;
-    }
-
-    h2 {
-        color: #04aa6d;
-    }
-</style>
-
-<h1 style="font-family: Arial">ЛеонМаркер</h1>
-
-<a href="/">Главная</a>
-<a href="/products">Товары</a>
-<a href="/discounts">Акции</a>
-
-<div class="product">
-    <img src="https://storum.ru/image/cache/products/376085-800x800.png">
-    <div>
-        <h2>Корм Вискас с лососем в желе</h2>
-        <p>Вкусный корм для вашего любимца со вкусом лосося</p>
-
-        Сложно найти таких взыскательных ценителей мяса, как кошки. Именно для них мы создали новый Whiskas «Мясная коллекция» для замурррчательной жизни. Это палитра мясных блюд, которые обладают особой волокнистой текстурой. Мы готовим их в нежном соусе или желе и упаковываем в паучи.
-        Порадуйте вашу кошку сочными кусочками с говядиной и доставьте ей максимум удовольствия. Подходит для стерилизованных котов и кошек.
+<div class="heading">
+    <div class="logo">
+        <h1>ЛеонМаркет</h1>
     </div>
-    <button>Купить</button>
 </div>
 
-<div class="product">
-    <img src="https://samizoo.ru/upload/iblock/03b/f9c8qjl91bn5yos2mgowor9p7xo4fbx3.jpg">
-    <div>
-        <h2>Корм Вискас с курицей и индейкой в паштете</h2>
-        <p>Вкусный корм для вашего любимца со вкусом курицы и индейки</p>
-
-        Сложно найти таких взыскательных ценителей мяса, как кошки. Именно для них мы создали новый Whiskas «Мясная коллекция» для замурррчательной жизни. Это палитра мясных блюд, которые обладают особой волокнистой текстурой. Мы готовим их в нежном паштете или желе и упаковываем в паучи.
-        Порадуйте вашу кошку сочными кусочками с говядиной и доставьте ей максимум удовольствия. Подходит для стерилизованных котов и кошек.
-    </div>
-    <button>Купить</button>
+<div>
+    <a href="/">Главная</a>
+    <a href="/products">Товары</a>
+    <a href="/discounts">Акции</a>
 </div>
+
+<div class="productList">
+    {% for product in products %}
+<div class="product">
+    <img src="{{ product.image_url }}">
+    <div class="text">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+    </div>
+    <div class="priceSection">
+        <h3>{{ product.price }} ₽</h3>
+        <button>Купить</button>
+    </div>
+</div>
+
+    {% endfor %}
+
