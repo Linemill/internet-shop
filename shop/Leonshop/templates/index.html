@@ -3,17 +3,18 @@
 
 <div class="heading" >
     <div class="logo">
-        <h1 class="logoText">ЛеонМаркет</h1>
+        <a class="linkLogo" href="/">
+            <h1 class="logoText">ЛеонМаркет</h1>
+        </a>
     </div>
     <form>
         <input type="text" placeholder="Поиск...">
         <button type="submit" class="buttonSearch"></button>
     </form>
     <div class="navigation">
-        <a href="/">Главная</a>
-        <a href="/products">Каталог</a>
-        <a href="/discounts">Акции</a>
-        <a href="/basket">Корзина</a>
+        <a class="linksNavigation" href="/products">Каталог</a>
+        <a class="linksNavigation" href="/discounts">Акции</a>
+        <a class="linksNavigation" href="/basket">Корзина</a>
     </div>
 </div>
 
@@ -24,7 +25,9 @@
 <div class="product">
     <img class="productPreview" src="{{ product.image_url }}">
     <div class="text">
-        <h2>{{ product.name }}</h2>
+        <a class="linksToProduct" href="/product/{{product.id}}">
+            <h2>{{ product.name }}</h2>
+        </a>
         <p>{{ product.description }}</p>
     </div>
     <div class="priceSection">

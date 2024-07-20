@@ -29,14 +29,22 @@
 
     }
 
-    a {
+    .linksNavigation {
         text-decoration: none;
         color: black;
         margin: 5px;
     }
 
-    a:hover{
+    .linksNavigation:hover{
         color: #87CEEB;
+    }
+
+    .linksToProduct {
+        text-decoration: none;
+    }
+
+    .linkLogo {
+        text-decoration: none;
     }
 
     h2 {
