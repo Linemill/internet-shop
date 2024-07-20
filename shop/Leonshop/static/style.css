@@ -6,16 +6,15 @@
         font-family: Oswald;
     }
 
-    h1 {
+    .logoText {
         color: white;
         padding: 0;
         margin: 0;
-
     }
 
-    img {
-        max-width: 300px;
-        max-height: 300px;
+    .productPreview {
+        width: 300px;
+        height: 300px;
     }
 
     .product {
@@ -25,18 +24,15 @@
         padding: 10px;
         background-color: white;
         width: 60%;
-    }
+        margin-left: auto;
+        margin-right: auto;
 
-    .heading {
-        display: flex;
-        align-items: center;
     }
 
     a {
         text-decoration: none;
         color: black;
         margin: 5px;
-
     }
 
     a:hover{
@@ -51,9 +47,10 @@
         background-color: #87CEEB;
         padding: 10px;
         border-radius: 10px;
+        margin-right: 100px;
     }
 
-    button {
+    .buttonBuy {
         height: 50px;
         width: 80%;
         background-color: white;
@@ -77,5 +74,64 @@
         text-align: center;
     }
 
+    .productCard {
+        width: 50%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+
+    }
+    .productDetails {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .heading {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        justify-content: center;
+    }
+
+    .navigation{
+        margin-left: 80px;
+
+    }
+
+    .productList{
+        background-color: #f6f6f6
+    }
+
+    form {
+        position: relative;
+        width: 300px;
+        margin-top: auto;
+
+    }
+    input, .buttonSearch {
+        border: none;
+        outline: none;
+        border-radius: 3px;
+    }
+    input {
+        width: 100%;
+        height: 42px;
+        background: #e6f4fa;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .buttonSearch {
+        height: 26px;
+        width: 26px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: #b6dff0;
+        cursor: pointer;
+    }
 
 </style>

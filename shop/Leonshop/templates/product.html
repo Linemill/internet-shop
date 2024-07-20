@@ -1,13 +1,12 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}"/>
 
-<div class="heading" >
+<div class="heading">
     <div class="logo">
         <h1 class="logoText">ЛеонМаркет</h1>
     </div>
     <form>
         <input type="text" placeholder="Поиск...">
-        <button type="submit" class="buttonSearch"></button>
     </form>
     <div class="navigation">
         <a href="/">Главная</a>
@@ -17,21 +16,19 @@
     </div>
 </div>
 
-
-
-<div class="productList">
-    {% for product in products %}
-<div class="product">
-    <img class="productPreview" src="{{ product.image_url }}">
-    <div class="text">
-        <h2>{{ product.name }}</h2>
-        <p>{{ product.description }}</p>
-    </div>
-    <div class="priceSection">
-        <h3>{{ product.price }} ₽</h3>
+<div class="productCard">
+    <img src="{{product.image_url}}">
+    <div class="productInfo">
+        <h1>{{product.name}}</h1>
+        <h3>{{product.price}} ₽</h3>
         <button class="buttonBuy">Купить</button>
     </div>
 </div>
-    {% endfor %}
-</div>>
 
+
+<div class="productDetails">
+    <h1>Описание</h1>
+    <p>
+        {{product.description}}
+    </p>
+</div>
