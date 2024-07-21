@@ -53,7 +53,9 @@
     .textGreen {
         color: #04aa6d;
     }
-
+    .textRed {
+        color: #FF4500;
+    }
     .logo {
         background-color: #87CEEB;
         padding: 10px;
