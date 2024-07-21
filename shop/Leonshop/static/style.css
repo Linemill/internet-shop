@@ -47,8 +47,11 @@
         text-decoration: none;
     }
 
-    h2 {
+    .textBlue {
         color: #87CEEB;
+    }
+    .textGreen {
+        color: #04aa6d;
     }
 
     .logo {
@@ -97,6 +100,15 @@
         margin-right: auto;
     }
 
+    .reviewHeader{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .reviewHeader * {
+        margin: 0px;
+    }
 
     .heading {
         display: flex;
