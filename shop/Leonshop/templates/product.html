@@ -7,8 +7,8 @@
             <h1 class="logoText">ЛеонМаркет</h1>
         </a>
     </div>
-    <form>
-        <input type="text" placeholder="Поиск...">
+    <form class="search">
+        <input type="text" class="searchInput" placeholder="Поиск...">
         <button type="submit" class="buttonSearch"></button>
     </form>
     <div class="navigation">
@@ -55,5 +55,27 @@
             </p>
         </div>
         {% endfor %}
+    </div>
+
+    <h1>Создать отзыв:</h1>
+    <div class="createReview">
+        <form class="createReviewForm" method="post">
+            <label for="author">Автор:</label>
+            <input name="author" class="inputElement"/>
+
+            <label for="rating">Оценка:</label>
+            <select name="rating" class="inputElement">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+            <label for="comment">Комментарий:</label>
+            <textarea name="comment" rows="10" class="inputElement"></textarea>
+
+            <button class="buttonPublish">Опубликовать отзыв</button>
+        </form>
     </div>
 </div>

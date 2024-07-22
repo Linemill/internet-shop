@@ -127,19 +127,45 @@
     .productList{
         background-color: #f6f6f6
     }
+    .createReviewForm {
+        display: flex;
+        flex-direction: column;
+    }
 
-    form {
+    .createReviewForm * {
+        margin-top: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+
+    }
+
+    .inputElement {
+        border: 2px solid #a6a6a6;
+        padding: 5px;
+    }
+
+    .buttonPublish {
+        height: 50px;
+        background-color: white;
+        border: 2px solid #d6d6d6;
+        color: #060606;
+        padding: 0;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .search {
         position: relative;
         width: 300px;
         margin-top: auto;
 
     }
-    input, .buttonSearch {
+    .searchInput, .buttonSearch {
         border: none;
         outline: none;
         border-radius: 3px;
     }
-    input {
+    .searchInput {
         width: 100%;
         height: 42px;
         background: #e6f4fa;
