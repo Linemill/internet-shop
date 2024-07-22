@@ -60,6 +60,7 @@
     <h1>Создать отзыв:</h1>
     <div class="createReview">
         <form class="createReviewForm" method="post">
+            {% csrf_token %}
             <label for="author">Автор:</label>
             <input name="author" class="inputElement"/>
 
