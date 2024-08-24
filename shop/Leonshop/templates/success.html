@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div class="heading" >
+    <div class="logo">
+        <a class="linkLogo" href="/">
+            <h1 class="logoText">ЛеонМаркет</h1>
+        </a>
+    </div>
+</div>
+
+<div class="payment" style="text-align: center">
+    <h1><i class="fa-solid fa-heart"></i>Поздравляю с покупкой!</h1>
+    <h2>Скоро с вами свяжется оператор, а пока можете вернуться на главную страницу</h2>
+</div>
+
+<script>
+    setTimeout(() => {
+        document.location ='/';
+    }, 5000);
+</script>

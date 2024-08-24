@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="heading" >
+    <div class="logo">
+        <a class="linkLogo" href="/">
+            <h1 class="logoText">ЛеонМаркет</h1>
+        </a>
+    </div>
+</div>
+
+<div class="payment">
+    <h1>Товар: {{product.name}}</h1>
+    <h2>К оплате: {{product.price}} ₽</h2>
+
+    <div class="vspace"></div>
+
+    <h2>Реквизиты для оплаты</h2>
+    <p><i class="fa-solid fa-phone"></i> +8 888 888 88 88</p>
+    <p><i class="fa-solid fa-user"></i> Леонов Леон Леонович</p>
+
+    <div class="vspace"></div>
+
+    <h2>Ваши данные</h2>
+    <form class="paymentDetailsForm" method="POST">
+        {% csrf_token %}
+        <label>Адрес доставки:</label>
+        <input class="inputElement" name="address">
+
+        <label>ФИО:</label>
+        <input class="inputElement" name="fullname">
+
+        <label>Номер телефона:</label>
+        <input class="inputElement" name="phone">
+
+        <div class="vspace"></div>
+        <button class="buttonBuy">Я оплатил(а)</button>
+    </form>
+
+</div>
